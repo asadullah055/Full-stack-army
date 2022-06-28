@@ -1,40 +1,37 @@
-
 function getPINs(observed) {
-    const adjasentKeys = [
-      /* 0 */  ["0", "8"],
-      /* 1 */  ["1", "2", "4"],
-      /* 2 */  ["1", "2", "3", "5"],
-      /* 3 */  ["2", "3", "6"],
-      /* 4 */  ["1", "4", "5", "7"],
-      /* 5 */  ["2", "4", "5", "6", "8"],
-      /* 6 */  ["3", "5", "6", "9"],
-      /* 7 */  ["4", "7", "8"],
-      /* 8 */  ["5", "7", "8", "9", "0"],
-      /* 9 */  ["6", "8", "9"]
-    ]
-    
-    function generateVariations(array1, array2) {
-      const variationArr = [];
-        for (let i = 0; i < array1.length; i++) {
-        //   console.log(array2);
-        for (let j = 0; j < array2.length; j++) {
-          variationArr.push(array1[i] + array2[j])
-        }
+  const adjasentKeys = [
+    /* 0 */ ["0", "8"],
+    /* 1 */ ["1", "2", "4"],
+    /* 2 */ ["1", "2", "3", "5"],
+    /* 3 */ ["2", "3", "6"],
+    /* 4 */ ["1", "4", "5", "7"],
+    /* 5 */ ["2", "4", "5", "6", "8"],
+    /* 6 */ ["3", "5", "6", "9"],
+    /* 7 */ ["4", "7", "8"],
+    /* 8 */ ["5", "7", "8", "9", "0"],
+    /* 9 */ ["6", "8", "9"],
+  ];
+
+  function generateVariations(array1, array2) {
+    const variationArr = [];
+    for (let i = 0; i < array1.length; i++) {
+      //   console.log(array2);
+      for (let j = 0; j < array2.length; j++) {
+        variationArr.push(array1[i] + array2[j]);
       }
-      return variationArr;
     }
-   
-    console.log(typeof ([...observed]));
-    return [...observed]
-      .reduce((acc, currKey) => {
-          if (acc.length === 0) return adjasentKeys[currKey]   
-         
-        return generateVariations(acc, adjasentKeys[currKey])
-      }, [])
+    return variationArr;
   }
 
-console.log(getPINs('32'));
+  console.log(typeof [...observed]);
+  return [...observed].reduce((acc, currKey) => {
+    if (acc.length === 0) return adjasentKeys[currKey];
 
+    return generateVariations(acc, adjasentKeys[currKey]);
+  }, []);
+}
+
+// console.log(getPINs('32'));
 
 /* function getPINs(observed) {
     const _ = undefined
@@ -75,3 +72,18 @@ console.log(getPINs('32'));
       ), [[]])
     }
   } */
+// const arr = ['a', 'b', 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let alfa = String.fromCharCode(...Array(123).keys())
+  .toString(36)
+  .slice(65, 91)
+  .split("");
+function suffleJs(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.round(Math.random() * (i + 1));
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+console.log(suffleJs(alfa));

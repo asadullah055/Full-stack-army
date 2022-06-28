@@ -10,19 +10,13 @@
  * * :human_name", Go to sleep
  */
 
-// Call Human_Lifecycle for 'Abu Musa'
-// Call Human_Lifecycle for 'Easin Islam'
-// Call Human_Lifecycle for 'Saiful Islam'
-// Call Human_Lifecycle for 'Akib Ahmed'
-// Call Human_Lifecycle for 'Alamin Mir'
-
 /**
  * Function: Sleep
  * Param: name
  * Definition: How to sleep
  */
 function sleep(name) {
-    console.log(`${name} is sleep`);
+  console.log(`${name} is sleep`);
 }
 /**
  * Function: Awake
@@ -30,7 +24,7 @@ function sleep(name) {
  * Definition: How to awake
  */
 function awake(name) {
-    console.log(`${name} is awake`);
+  console.log(`${name} is awake`);
 }
 /**
  * Function: Eat
@@ -38,8 +32,8 @@ function awake(name) {
  * Param: Time
  * Definition: How to eat
  */
-function eat(name,time) {
-    console.log(`${name} is taking ${time}`);
+function eat(name, time) {
+  console.log(`${name} is taking ${time}`);
 }
 /**
  * Function: Walk
@@ -47,8 +41,8 @@ function eat(name,time) {
  * Param: Destination
  * Definition: How to walk
  */
-function walk(name,destination) {
-    console.log(`${name} is walking ${destination}`);
+function walk(name, destination) {
+  console.log(`${name} is walking ${destination}`);
 }
 /**
  * Function: Study
@@ -56,7 +50,7 @@ function walk(name,destination) {
  * Definition: How to study
  */
 function study(name) {
-    console.log(`${name} is study}`);
+  console.log(`${name} is study}`);
 }
 /**
  * Function: Work
@@ -64,7 +58,7 @@ function study(name) {
  * Definition: How to work
  */
 function work(name) {
-    console.log(`${name} is working}`);
+  console.log(`${name} is working}`);
 }
 /**
  * Function: Job_Holder_Lifecycle
@@ -80,32 +74,16 @@ function work(name) {
  * - Sleep -> name
  */
 function Job_Holder_Lifecycle(name) {
-    awake(name);
-    eat(name, "Breakfast");
-    walk(name, 'office')
-    work(name)
-    eat(name, 'Lunch')
-    walk(name, 'home')
-    eat(name, 'dinner')
-    sleep(name)
+  awake(name);
+  eat(name, "Breakfast");
+  walk(name, "office");
+  work(name);
+  eat(name, "Lunch");
+  walk(name, "home");
+  eat(name, "dinner");
+  sleep(name);
 }
 console.log();
-/**
- * Function: Student Lifecycle
- * Param: name
- * Definition:
- * - Awake -> name
- * - Eat -> name, 'breakfast'
- * - Study -> name
- * - Eat -> name, 'lunch'
- * - Study -> name
- * - Eat -> name, 'dinner'
- * - Sleep -> name
- */
 
-// Students_Lifecycle -> 'Faruk'
-// Students_Lifecycle -> 'Elias'
-// Students_Lifecycle -> 'Faisal'
-// Job_Holder_Lifecycle -> 'Musa'
-// Job_Holder_Lifecycle -> 'Akib'
-// Job_Holder_Lifecycle -> 'Bipon'
+// function composition
+// 1.25.00
